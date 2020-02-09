@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './images/logo.png';
 import './App.css';
 import ListItems from './ListItems'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -70,16 +70,21 @@ class App extends React.Component {
  render(){
   return (
     <div className="App">
+      
+          
+        
       <header>
+        
         <form id="to-do-form" onSubmit={this.addItem}>
-          <input type="text" placeholder="Enter task" value= {this.state.currentItem.text} onChange={this.handleInput}></input>
-          <button type="submit">Add</button>
+          <input type="text" placeholder="Nouvel Objet" value= {this.state.currentItem.text} onChange={this.handleInput}></input>
+          <button type="submit">Ajouter</button>
         </form>
         <p>{this.state.items.text}</p>
         
           <ListItems items={this.state.items} deleteItem={this.deleteItem} setUpdate={this.setUpdate}/>
         
       </header>
+      <img src={logo} alt='logo'/>
     </div>
   );
  }
